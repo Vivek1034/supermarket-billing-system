@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+    <title>E-dine Exquistic</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Merriweather:wght@300&family=Ubuntu:wght@700&display=swap"
+        rel="stylesheet">
+    <!-- font end-->
+    <link rel="stylesheet" href="./style/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <!-- Modal -->
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="m-color modal-title" id="exampleModalLabel">Signin Page</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card-l">
+                        <div class="card-header">
+                            <h4 class="text-center">E-Dine Exquistic- Login</h4>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Username</label>
+                                    <input type="text" class="form-control place" id="username"
+                                        placeholder="Enter your username">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label ">Password</label>
+                                    <input type="password" class="form-control  place" id="password"
+                                        placeholder="Enter your password">
+                                </div>
+                                <button type="submit" class="btn btn-secondary btn-block" onclick="msg()">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <span class="m-color ">Don't have an account? <button type="button" class="btn text-info"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                        Create Account
+                    </button> </span>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal end -->
+
+    <!-- second modal -->
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content ">
+                <div class="modal-header">
+
+                    <h5 class="modal-title m-color" id="exampleModalLabel">Create Account</h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card-l">
+                        <div class="card-header ">
+                            <h4 class="text-center">E-Dine Exquistic-SignUp</h4>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="username" class="form-label ">Username</label>
+                                    <input type="text" class="form-control  place" id="username"
+                                        placeholder="Enter your username">
+                                </div>
+                                <div class="mb-3">
+
+                                    <label for="email" type="email" class="form-label ">Email</label>
+                                    <input type="text" class="form-control  place" id="username"
+                                        placeholder="Enter your Email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control place" id="password"
+                                        placeholder="Enter your password">
+                                </div>
+
+                                <button type="submit" class="btn btn-secondary btn-block"
+                                    onclick="create()">Create</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <span class="m-color">Already have an account? <button type="button" class="btn text-info"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Login
+                    </button> </span>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Second modal end -->
+
+
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-md bg-body-tertiary navbar-dark fixed-top" style="background-color:rgb(234, 228, 228); box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+">
+        <!-- style="background-color: rgb(205, 215, 195);"-->
+        <div class="container-fluid ">
+            <a class="navbar-brand ms-5" href="#">
+                <img src="./images/Index Images/Logo.png" style="height:50px;">
+                <!-- <h2 class="text-dark fw-bold">E-Dine Exquistic</h2> -->
+                <button class="navbar-toggler ms-5" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation" class="ms-5">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </a>
+
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link ms-5 text-dark" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="./menu.html">Menus</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="./pages/billing_section.html">Billing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="./pages/contactus.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="./pages/about.html">About Us</a>
+                    </li>
+
+
+
+                </ul>
+                <form class="d-flex me-2" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn text-dark me-3" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+
+                <button class="btn  me-3 desktop" type="submit" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <i class="bi bi-three-dots-vertical fs-2"></i></button>
+
+
+            </div>
+        </div>
+    </nav>
+    <div class="offcanvas offcanvas-end  text-bg-dark" tabindex="-1" id="offcanvasExample" style="background-color:rgb(234, 228, 228); box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    "
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><i
+                    class="bi bi-person-square text-dark fs-3 me-2"></i></h5>
+            <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <h6 class="text-dark">Sign Up</h6>
+                </button>
+            </div>
+            <hr class="text-dark">
+            <div>
+                <button class="btn">
+                    <h6 class="text-dark"><i class="bi bi-sign-merge-right fs-4"></i> Get Direction</h6>
+                </button>
+
+            </div>
+            <hr class="text-dark">
+            <div>
+                <button class="btn">
+                    <h6 class="text-dark">Help Center</h6>
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Navbar End -->
+
+
+    <!-- Corousel -->
+    <div class="container-fluid">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <video autoplay="autoplay" id="coverVideo" loop="loop" muted="muted" playsinline="playsinline"
+                        poster="https://static.spotapps.co/web/americanalasvegas--com/custom/video_poster.jpg" class="d-block w-100" >
+                        <source
+                            src="https://static.spotapps.co/website_videos/Americana_Website_Intro_EditedVideo_01142022_Vimeo720p30.m4v"
+                            type="video/mp4"> 
+                    </video>
+                    <!-- <img src="./images/Index Images/corousel1.avif" class="d-block w-100" alt="..."> -->
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/Index Images/corousel2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/Index Images/corousel3.jpeg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- corousel ends -->
+
+
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 class="catering-head fw-bolder text-center">CATERING</h1>
+                <h1 class="text-center secondhead">Let us cater your next event</h1>
+                <pre class="mt-4  text-center fs-5">
+    We Cater your Needs. Elegant style of catering for your style 
+and budget. Any kind of event from weddings to birthdays.
+
+<button class="btn btn-outline-primary ">CATERING</button>
+            </pre>
+            
+            </div>
+            <div class="col-lg-6">
+                <p class="mt-4 ms-2 ">
+                    <img src="./images/Index Images/catering.webp"
+                        class="img-fluid col-lg-11 col-sm-10 mt-5 rounded-1 img">
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="mt-4 ms-2 ">
+                    <img src="./images/Index Images/parties.jpeg"
+                        class="img-fluid col-lg-11 col-sm-10 mt-5 rounded-1 img">
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <h1 class="catering-head fw-bolder text-center">PARTIES</h1>
+                <h1 class="text-center secondhead">Book your next party with us!</h1>
+                <pre class="mt-4  text-center fs-5">
+      No matter the occasion you can celebrate at our place! 
+ Book a private party.
+
+ <button class="btn btn-outline-primary ">PARTIES</button>
+            </pre>
+            </div>
+        </div>
+        <hr>
+        <!-- Gallery -->
+
+        <div class="row ">
+            <h1 class="text-center mb-md-5 head fw-bold"><u>Gallery</u></h1>
+            <div class="col-md-12 d-md-flex justify-content-around ">
+                <div class="col-md-4 img col-11">
+                    <img src="./images/Index Images/gallery1.webp" style="height: 340px; width:470px;" class="img1 first-img">
+                </div>
+
+                <div class="col-md-2 img col-11">
+                    <img src="./images/Index Images/gallery3.jpeg" style="height:340px;" class="img1">
+                </div>
+
+                <div class="col-md-2 img col-11">
+                    <img src="./images/Index Images/gallery4.jpg" style="height: 340px;" class="img1">
+                </div>
+                <div class="col-md-2 img col-11">
+                    <img src="./images/Index Images/gallery5.webp" style="height: 340px;" class="img1">
+                </div>
+                <div class="col-md-2 img col-11">
+                    <img src="./images/Index Images/gallery6.webp" style="height: 340px;" class="img1">
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="row mt-4">
+            <div class="col-md-12 d-md-flex justify-content-around ">
+                <div class="col-md-2 img col-11">
+                    <img src="./images/Index Images/gallery7.jpeg" style="height: 340px;" class="img1">
+                </div>
+                <div class="col-md-2 img col-11">
+                    <img src="./images/Index Images/gallery8.webp" style="height: 340px;" class="img1">
+                </div>
+                <div class="col-md-2 img col-11">
+                    <img src="./images/Index Images/gallery9.jpg" style="height:340px;" class="img1">
+                </div>
+                <div class="col-md-2 img col-11">
+                    <img src="./images/Index Images/gallery10.jpg" style="height: 340px;" class="img1">
+                </div>
+                <div class="col-md-4 img lst-img col-11">
+                    <img src="./images/Index Images/gallery11.jpg" class="lst1-img img1" style="height: 340px;">
+                </div>
+
+
+            </div>
+        </div>
+        <!-- Gallery end -->
+        <!-- location  -->
+        <div class="row  mt-md-5">
+            <h1 class="text-center mb-md-5 mt-md-5 head fw-bold"><u>Our Location</u></h1>
+            <div class="col-md-12 ">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.7972414328956!2d72.87116519678956!3d19.0726503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c892b9cf57cd%3A0xf63e12173e299d2!2sDeluxe%20Restaurant!5e0!3m2!1sen!2sin!4v1693330126170!5m2!1sen!2sin"
+                    width="1500" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-12 d-md-flex justify-content-around">
+                <div class="col-md-3 ">
+                    <h3 class="fw-bolder mt-3 mb-2  head">Book Table</h3>
+                    <button class="btn btn-outline-primary mt-5 ms-md-4">Call Now</button>
+
+                </div>
+                <div class="col-md-3 ">
+                    <h3 class="fw-bolder mt-3 mb-2  head">Opening Hours</h3>
+                    Mon: 11:30 am-11:30 pm <Br>
+                    Tue: 11:30 am-11:30 pm<Br>
+                    Wed: 11:30 am-11:30 pm<Br>
+                    Thu: 11:30 am-11:30 pm<Br>
+                    Fri: 11:30 am-11:30 pm<Br>
+                    Sat: 11:30 am-11:30 pm<Br>
+                    Sun: 11:30 am-11:30 pm
+
+                </div>
+                <div class="col-md-3 ">
+                    <h3 class="fw-bolder mt-3 mb-2  head">Address</h3>
+                    <Address>Plot No 21/a
+                        Ring Road
+                        beside HP Petrol Pump
+                        Mhalgi Nagar
+                        Nagpur, Maharashtra 440034
+                        India</Address>
+                    <button class="btn btn-outline-primary mt-5">Get Direction </button>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- reviews -->
+        <div class="row mt-5">
+            <h1 class="head fw-bolder text-center">REVIEWS</h1>
+            <div class="col-md-12 d-md-flex justify-content-around">
+                <div class="col-md-3">
+                    <p class="fs-3 color secondhead">Review by- Aditya P</p>
+                    <p class="text-warning"><i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i> <span class="text-dark">4 days ago</span>
+                    </p> <span>If you are looking for a beautiful ambience ,
+                        good service
+                        and delicious food then you can stop your search and visit this restuarent cum lounge for sure.
+                        such place is much needed in East Nagpur as there were no such place uptill now nearby manewada
+                        , Mhalgi nagar , dighori, and Nandanvan. There is no need to go now outskirts of nagpur for good
+                        food and vibe.</span>
+                </div>
+                <div class="col-md-3">
+                    <p class="fs-3 color secondhead">Review by- Rohan B</p>
+                    <p class="text-warning"><i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i> <span class="text-dark">1 week ago</span>
+                    </p>
+                    <span>It was a great experience. The ambience was wonderful, the food was superb and the service was
+                        good. Overall well recommended for your dine out with family or friends or any celebration as
+                        well.</span>
+                </div>
+                <div class="col-md-3">
+                    <p class="fs-3 color  secondhead">Review by- Kritika S</p>
+                    <p class="text-warning"><i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i> <span class="text-dark">2 weeks ago</span>
+                    </p>
+                    <span>Reasonable prices , good ambience and great food. Highly recommended if you are looking for
+                        quality food.</span>
+                   
+                </div>
+            </div>
+        </div>
+        <!-- reviews end -->
+    </div> <!--end div-->
+
+
+    <br>
+
+
+
+    <!-- Footer -->
+    <footer class="restaurant-footer">
+        <div class="restaurant-name">
+            <h1>E-Dine Exquisite</h1>
+        </div>
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <ul class="contact-info">
+                    <li><i class="bi bi-telephone-fill fs-2"></i> 123-456-7890</li>
+                    <li><i class="bi bi-envelope-fill fs-2 me-2"></i> <a href="mailto:info@restaurant.com"
+                            class="text-decoration-none text-light">edine@xquisite.com</a></li>
+                    <li><i class="bi bi-geo-alt-fill fs-2"></i>Nagpur,Maharastra</li>
+                    <li><i class="bi bi-whatsapp fs-2"></i> 123-456-7890</l>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Follow Us</h2>
+                <ul class="social-icons">
+                    <li><i class="bi bi-facebook fs-1"></i></li>
+                    <li><i class="bi bi-twitter"></i></li>
+                    <li><i class="bi bi-instagram"></i></li>
+                    <li><i class="bi bi-youtube"></i></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h2>About Us</h2>
+                <p>Our Restaurant offers a delightful dining experience, with a diverse menu crafted from fresh and
+                    locally sourced ingredients. Our commitment to quality and taste is what sets us apart.</p>
+            </div>
+
+            <div class="footer-section">
+                <h2>Help</h2>
+                <ul class="help-info ">
+                    <li><a href="#" class="text-decoration-none text-light">Payments</a></li>
+                    <li><a href="#" class="text-decoration-none text-light">F&Qs</a></li>
+                    <li><a href="#" class="text-decoration-none text-light">Customer Support</a></li>
+                    <li><a href="#" class="text-decoration-none text-light">Contact us</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</html>
